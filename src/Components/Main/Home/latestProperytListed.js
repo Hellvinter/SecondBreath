@@ -2,7 +2,7 @@ import React from 'react';
 
 import flex from '../../../Styles/modules/flex.module.css';
 
-import Carousel from './carousel/indexCarousel';
+import Carousel from '../../Common/Carousel/indexCarousel';
 
 function LatestProperty () {
     return (

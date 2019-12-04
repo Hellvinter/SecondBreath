@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-import { data } from '../../../../Data/fake_database/fake_estate';
+import { data } from '../../../Data/fake_database/fake_estate';
 
 import ItemOfCarousel from './carouselItems';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import carousel from '../../../../Styles/modules/carousel.module.css';
-import flex from '../../../../Styles/modules/flex.module.css';
+import carousel from '../../../Styles/modules/carousel.module.css';
+
 
 const ItemOfCarousel = props => {
 
