@@ -1,0 +1,6 @@
+.common {
+    width: 70%;
+    margin: 0 auto;
+    composes: flexRow from './flex.module.css';
+    composes: justifyAround from './flex.module.css';
+}

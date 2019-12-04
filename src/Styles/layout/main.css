@@ -1,0 +1,24 @@
+#homeWelcome {
+    height: 100vh;
+    background: silver url("../../Assets/home_bg/bridgePerspective_1290x1080.jpg") no-repeat center;
+    background-size: cover;
+    color: white;
+}
+
+#homeWelcome h1 {
+    padding-top: 5rem;
+    margin-bottom: 2rem;
+}
+
+#callToAction {
+    background-color: #55b286;
+    height: 5rem;
+}
+
+#latestProperty {
+    padding: 3rem 0;
+}
+
+#latestProperty h2 {
+    margin-bottom: 1.5rem;
+}

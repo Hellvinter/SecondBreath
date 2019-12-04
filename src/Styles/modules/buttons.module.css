@@ -1,0 +1,25 @@
+.common {
+    padding: .3rem;
+    background: inherit;
+    color: #fff;
+    cursor: pointer;
+}
+
+.rightOffset {
+    margin-right: 2rem;
+}
+
+.leftOffset {
+    margin-left: 2rem;
+}
+
+.borderless {
+    border: none;
+}
+
+.big {
+    text-transform: uppercase;
+}
+
+
+
