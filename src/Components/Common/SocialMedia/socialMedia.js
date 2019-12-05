@@ -21,19 +21,9 @@ export const socialLinks = [
 export const SocialMedia = (props) => {
     return (
         props.object.map(item => (
-            <li 
-                key={item.index}
-                className={props.liStyles}
-            >
-                <a 
-                    href={item.link}
-                    className={props.linkStyles}
-                >
-                    <img 
-                        src={item.img} 
-                        alt={item.alt} 
-                        className={props.iconsStyles}
-                    />
+            <li key={item.index}>
+                <a href={item.link} >
+                    <img src={item.img} alt={item.alt} />
                 </a>
             </li>
         ))

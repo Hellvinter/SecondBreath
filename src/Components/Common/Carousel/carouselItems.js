@@ -1,7 +1,38 @@
 import React from 'react';
+import styled from 'styled-components';
 
-import carousel from '../../../Styles/modules/carousel.module.css';
+import { flexRow, flexColumn, noWraping, justifyBetween, alignCenter }
+from '../GlobalStyles/flexStyles';
 
+// Define styled components.
+
+const Carousel = styled.div`
+    max-width: 50rem;
+    width: 100%;
+    ${props => props.flex && [ flexRow, noWraping, justifyBetween ]};
+`;
+
+const ViewSpace = styled.div`
+    width: 100%;
+    overflow-x: hidden;
+    ${props => props.flex && [ flexRow, noWraping, justifyBetween ]};
+`;
+
+const Card = styled.div`
+    ${props => props.flex && [ flexColumn, alignCenter ]};
+    flex: 0 0 100%;
+    padding-top 3rem;
+`;
+
+const ArrowBtn = styled.button`
+    padding: 2rem 1rem;
+    max-width: 5rem;
+    width: 100%;
+    background: none;
+    border: none;
+`;
+
+// End of styled components.
 
 const ItemOfCarousel = props => {
 
@@ -12,21 +43,19 @@ const ItemOfCarousel = props => {
     }
 
     return (
-        <div className={`${carousel.carousel}`}>
-            <button
-                onClick={props.previous} 
-                className={`${carousel.arrow}`}
+        <Carousel flex>
+            <ArrowBtn onClick={props.previous} 
                 // disable previouse button if index equal 0
                 // that way I temporaly fix issue with negative index
                 disabled={props.count.index === 0}
             >
                 <img src={arrows.left} alt={arrows.alt} />
-            </button>
-            <div className={`${carousel.view}`}>
+            </ArrowBtn>
+            <ViewSpace flex>
                 {props.data.map( item => (
-                    <div
+                    <Card
+                        flex
                         key={item._id} 
-                        className={`${carousel.card}`}
                     >
                         <img  
                             src={props.count.picture} 
@@ -34,16 +63,13 @@ const ItemOfCarousel = props => {
                         />
                         <h3>{props.count.city}</h3>
                         <p>{props.count.address}</p>
-                    </div>
+                    </Card>
                 ))}
-            </div>
-            <button 
-                onClick={props.next}
-                className={`${carousel.arrow}`}
-            >
+            </ViewSpace>
+            <ArrowBtn onClick={props.next}>
                 <img src={arrows.right} alt={arrows.alt}/>
-            </button>
-        </div>
+            </ArrowBtn>
+        </Carousel>
     );
 }
 

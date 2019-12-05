@@ -1,45 +1,34 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import {
-    flexRow ,flexColumn, justifyBetween
-} 
-from '../Common/GlobalStyles/flexStyles';
+import {flexRow, justifyBetween} from '../Common/GlobalStyles/flexStyles';
 
-import header from '../../Styles/layout/header.module.css';
-
-import Logo from './logo';
 import IndexLogIn from './LogIn/indexLogIn';
 import IndexNav from './Nav/indexNav';
 
+// Define styled components.
+
+const Row = styled.div`
+${props => props.flex && [flexRow, justifyBetween]};
+background-color : ${props => (props.rowOne ? '#55b286' : '#fff')};
+`;
+
+const Logo = styled.h2`
+    margin-left: 2rem;
+`;
+
 function IndexHeader () {
 
-    const Header = styled.header`
-        ${flexColumn};
-    `;
-
-    const Row = styled.div`
-        ${flexRow};
-        ${justifyBetween};
-        ${props => props.rowOne ? ('background-color: #55b286'
-        ) : (
-            'background-color: #fff'
-        )};
-    `;
-//className={header.index}
-//className={
-//    `${header.row} ${header.rowOneGreen}`
-//}
     return (
-        <Header >
-            <Row rowOne>
-                <Logo styles={header.logo}/>
+        <header>
+            <Row rowOne flex>
+                <Logo>Big house</Logo>
                 <IndexLogIn />
             </Row>
-            <div className={header.row}>
+            <Row flex>
                 <IndexNav />
-            </div>
-        </Header>
+            </Row>
+        </header>
     )
 }
 

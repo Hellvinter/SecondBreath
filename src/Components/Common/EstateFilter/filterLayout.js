@@ -1,6 +1,13 @@
 import React, {Fragment} from 'react';
+import styled from 'styled-components';
 
-import filter from '../../../Styles/modules/filter.module.css';
+import { flexRow, justifyAround } from '../GlobalStyles/flexStyles';
+
+const FilterForm = styled.form`
+    width: 70%;
+    margin : 0 auto;
+    ${props => props.flex && [flexRow, justifyAround]};
+`;
 
 const FilterLayout = () => {
 
@@ -61,14 +68,14 @@ const FilterLayout = () => {
 
     return (
         <div id='estateFilter'>
-            <form className={`${filter.common}`}>
+            <FilterForm flex>
                 <input type='text' />
                 <FilterOptions object={Price} default="Min Price" />
                 <FilterOptions object={Price} default="Max Price" />
                 <FilterOptions object={beds} default="Beds" />
                 <FilterOptions object={baths} default="Baths" />
                 <button> => </button>
-            </form>
+            </FilterForm>
         </div>
     );
 }

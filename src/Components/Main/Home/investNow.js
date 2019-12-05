@@ -1,31 +1,35 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-import buttons from '../../../Styles/modules/buttons.module.css';
-import flex from '../../../Styles/modules/flex.module.css';
+import { flexRow, justifyAround} from '../../Common/GlobalStyles/flexStyles';
+import { commonBtn } from '../../Common/GlobalStyles/buttonsStyles';
+
+// Define styled components
+
+const Invest = styled.section`
+    background-color: #55b286;
+    height: 5rem;
+    ${props => props.flex && [flexRow, justifyAround]};
+`;
+
+const CallToAction = styled(Link)`
+    ${props => props.btnCommon && commonBtn};
+    text-transform: uppercase;
+`;
 
 function InvestNow () {
     return (
-        <section 
-            id='callToAction' 
-            className={
-                `${flex.flexRow} ${flex.justifyAround}`
-            }>
+        <Invest flex>
             <h3>
                 Want to start gain wealth?
             </h3>
-            <Link
-                to={'/'}
-                className={
-                    `
-                    ${buttons.generic} 
-                    ${buttons.borderless}
-                    ${buttons.big}
-                    `
-            }>
+            <CallToAction
+                btnCommon
+                to={'/'}>
                 Invest now
-            </Link>
-        </section>
+            </CallToAction>
+        </Invest>
     );
 }
 

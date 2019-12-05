@@ -1,8 +1,13 @@
 import React from 'react'
 import auth from './auth';
 import { useHistory } from 'react-router-dom'
+import styled from 'styled-components';
+import {commonBtn} from '../../Common/GlobalStyles/buttonsStyles';
 
-import buttons from '../../../Styles/modules/buttons.module.css';
+const Button = styled.button`
+    ${props => props.common && commonBtn}
+    margin-right: 2rem;
+`;
 
 function IndexLogIn () {
 
@@ -11,14 +16,8 @@ function IndexLogIn () {
     return (
         <div id='indexLogIn'>
             { !auth.authenticated ? (
-                <button 
-                    className={
-                        `
-                            ${buttons.common} 
-                            ${buttons.borderless}
-                            ${buttons.rightOffset}
-                        `
-                    }
+                <Button
+                    common 
                     onClick={ () => {
                         auth.login(() => {
                             history.push("/loged")
@@ -26,16 +25,10 @@ function IndexLogIn () {
                     }}
                 >
                     Sign in
-                </button>
+                </Button>
                 ) : (
-                <button 
-                    className={
-                        `
-                            ${buttons.generic} 
-                            ${buttons.borderless}
-                            ${buttons.rightOffset}
-                        `
-                    }
+                <Button 
+                    common
                     onClick={ () => {
                         auth.logout(() => {
                             history.push("/")
@@ -43,7 +36,7 @@ function IndexLogIn () {
                     }}
                 >
                     Sign out
-                </button> 
+                </Button> 
                 )
             } 
         </div>
