@@ -1,12 +1,12 @@
 import React  from 'react';
 import styled from 'styled-components'; 
 
-import { container } from '../../Common/GlobalStyles/helpers';
+import { container } from '../../../Common/GlobalStyles/helpers';
 
-import { SocialMedia, socialLinks } from '../../Common/SocialMedia/socialMedia';
-import EstateFilter from '../../Common/EstateFilter/estateFilter';
+import { SocialMedia, socialLinks } from '../../../Common/SocialMedia/socialMedia';
+import EstateFilter from '../../../Common/EstateFilter/estateFilter';
 
-import img from "../../../Assets/home_bg/bridgePerspective_1290x1080.jpg";
+import img from "../../../../Assets/home_bg/bridgePerspective_1290x1080.jpg";
 
 // Define styled components.
 

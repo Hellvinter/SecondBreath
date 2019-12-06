@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-import { flexRow, justifyAround} from '../../Common/GlobalStyles/flexStyles';
-import { commonBtn } from '../../Common/GlobalStyles/buttonsStyles';
+import { flexRow, justifyAround} from '../../../Common/GlobalStyles/flexStyles';
+import { commonBtn } from '../../../Common/GlobalStyles/buttonsStyles';
 
 // Define styled components
 

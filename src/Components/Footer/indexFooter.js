@@ -1,20 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Contacts from './contacts';
+import Contacts from './Contacts/indexContacts';
 
-const Footer = styled.footer`
+const FooterStyled = styled.footer`
     text-align: center;
     padding: 2.15rem 0;
     background-color: #414362;
 `;
 
-function IndexFooter () {
+function Footer () {
     return (
-        <Footer>
+        <FooterStyled>
             <Contacts />  
-        </Footer>
+        </FooterStyled>
     )
 }
 
-export default IndexFooter;
+export default Footer;

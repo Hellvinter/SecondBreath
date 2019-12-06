@@ -17,7 +17,7 @@ const Logo = styled.h2`
     margin-left: 2rem;
 `;
 
-function IndexHeader () {
+function Header () {
 
     return (
         <header>
@@ -32,4 +32,4 @@ function IndexHeader () {
     )
 }
 
-export default IndexHeader;
+export default Header;

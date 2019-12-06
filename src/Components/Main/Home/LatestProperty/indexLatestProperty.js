@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 // Import of Global styles.
-import { flexColumn, alignCenter } from '../../Common/GlobalStyles/flexStyles';
-import { container } from '../../Common/GlobalStyles/helpers';
+import { flexColumn, alignCenter } from '../../../Common/GlobalStyles/flexStyles';
+import { container } from '../../../Common/GlobalStyles/helpers';
 
-import Carousel from '../../Common/Carousel/indexCarousel';
+import Carousel from '../../../Common/Carousel/indexCarousel';
 
 // Define styled components.
 

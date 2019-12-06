@@ -6,7 +6,7 @@ export const routs = [
 
     {
         name: 'About',
-        path: '/',
+        path: '/about',
     },
 
     {

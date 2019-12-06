@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { flexRow, justifyAround} from '../Common/GlobalStyles/flexStyles';
-import {SocialMedia, socialLinks} from '../Common/SocialMedia/socialMedia';
+import { flexRow, justifyAround} from '../../Common/GlobalStyles/flexStyles';
+import {SocialMedia, socialLinks} from '../../Common/SocialMedia/socialMedia';
 
 const Ul = styled.ul`
     ${props => props.flex && [flexRow, justifyAround]}

@@ -1,10 +1,10 @@
 import React from 'react';
 
-import HomeWelcome from './homeWelcome';
-import InvestNow from './investNow';
-import LatestProperty from './latestProperytListed';
+import HomeWelcome from './Welcome/indexWelcome';
+import InvestNow from './InvestNow/indexInvest';
+import LatestProperty from './LatestProperty/indexLatestProperty';
 
-function IndexHome () {
+function Home () {
     return (
         <main className='main'>
             <HomeWelcome />
@@ -14,7 +14,7 @@ function IndexHome () {
     );
 }
 
-export default IndexHome;
+export default Home;
 
 // for Estate Filter make generic styles for usage across app on all of the instanses of that filter
 // but also, make an module styles and apply them through props in order to modify appearence of the component slitly 

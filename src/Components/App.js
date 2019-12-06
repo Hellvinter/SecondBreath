@@ -4,20 +4,25 @@ import ProtectedRoute from "./Header/LogIn/protectedRoute"
 
 import GlobalStyle from './Common/GlobalStyles/globalStyles';
 
-import IndexHeader from './Header/indexHeader';
-import IndexHome from './Main/Home/indexHome';
+import Header from './Header/indexHeader';
+import Home from './Main/Home/indexHome';
+import AboutProject from './Main/AboutProject/indexAbout';
 import UserPage from './Main/UserPage/userPage'
-import IndexFooter from './Footer/indexFooter';
+import Footer from './Footer/indexFooter';
 
 function App() {
   return (
     <Fragment>
       <GlobalStyle />
-      <IndexHeader />
+      <Header />
       <Switch>
         <Route 
           exact path='/' 
-          component={ IndexHome } 
+          component={ Home } 
+        />
+        <Route
+          path='/about'
+          component={AboutProject}
         />
         <ProtectedRoute  
           exact path='/loged' 
@@ -25,7 +30,7 @@ function App() {
         />
         <Route path='*' component={ () => "404 NOT FOUND"} />
       </Switch>
-      <IndexFooter />
+      <Footer />
     </Fragment>
   );
 }
