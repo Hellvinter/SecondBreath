@@ -14,13 +14,14 @@ const CompletedTask = styled.p`
 
 function TodoMarkup (props) {
     return (
-        <ul>
+        <TodoUl>
             <h4>{props.heading}</h4>
             {props.data.map((item, i) => (
-                <li key={i}>{item}</li>
+                <TodoLi key={i}>{item}</TodoLi>
             ))}
-        </ul>
+        </TodoUl>
     );
 }
 
 export default TodoMarkup;
+

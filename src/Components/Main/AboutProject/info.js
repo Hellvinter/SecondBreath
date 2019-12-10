@@ -9,29 +9,29 @@ export const aboutProject = {
         "and showcase them as well."
 }
 
-export const shortFrontTodo = [
-    "Redo design of website to suit new goals",
-    "Make a markup of all pages with styling",
-    "Place existing features on new places",
-    "Place other task by order and prioritet"
+export const genericTodos = [
+    "Remake layout of pages and make new ones",
+    "Place existing components on their new places",
+    
 ];
 
-export const midFrontTodo = [
-
+export const generalStylesTodos = [
+    "Take web design courlse",
+    "Redo overall design of website to suit new standarts",
 ];
 
-export const longFrontTodo = [
-
-];
-
-export const shortBackTodo = [
+export const homeTodos = [
 
 ];
 
-export const midBackTodo = [
+export const realEstateTodos = [
 
 ];
 
-export const longBackTodo = [
+export const stockMarketTodos = [
+
+];
+
+export const aboutTodos = [
 
 ];
