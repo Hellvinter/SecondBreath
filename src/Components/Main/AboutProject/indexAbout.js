@@ -7,6 +7,7 @@ import { aboutProject, genericTodos, generalStylesTodos } from './info';
 import AboutMarkup from './aboutMarkup';
 import Todo from './Todo/indexTodo';
 
+// Styled components.
 const Section = styled.section`
     text-align: center;
     ${props => props.container && container}
