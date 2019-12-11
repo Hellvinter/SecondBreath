@@ -1,21 +1,21 @@
 export const routs = [
-    {
-        name: 'Home',
-        path: '/',
-    },
+  {
+    name: "Home",
+    path: "/"
+  },
 
-    {
-        name: 'About',
-        path: '/about',
-    },
+  {
+    name: "About",
+    path: "/about"
+  },
 
-    {
-        name: 'Watch Estate',
-        path: '/',
-    },
+  {
+    name: "Watch Estate",
+    path: "/"
+  },
 
-    {
-        name: 'Contacts',
-        path: '/',
-    }
-]
+  {
+    name: "Contacts",
+    path: "/"
+  }
+];

@@ -1,10 +1,8 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from "react";
 
-import TodoMarkup from './todoMarkup';
+import TodoMarkup from "./todoMarkup";
 
-function Todo (props) {
-    return (
-        <TodoMarkup {...props} />
-    );
+function Todo(props) {
+  return <TodoMarkup {...props} />;
 }
 export default Todo;

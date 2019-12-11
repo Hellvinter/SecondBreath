@@ -1,11 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import FilterLayout from './filterLayout';
+import FilterLayout from "./filterLayout";
 
-function EstateFilter () {
-    return (
-        <FilterLayout />
-    )
+function EstateFilter() {
+  return <FilterLayout />;
 }
 
 export default EstateFilter;
