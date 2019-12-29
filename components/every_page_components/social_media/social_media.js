@@ -1,6 +1,7 @@
 import React from "react";
+import styled from "styled-components";
 
-export const socialLinks = [
+const socialLinks = [
   {
     img: "https://img.icons8.com/color/36/000000/github--v1.png",
     link: "https://github.com/Hellvinter",
@@ -18,12 +19,18 @@ export const socialLinks = [
   }
 ];
 
-export const SocialMedia = props => {
-  return props.object.map(item => (
-    <li key={item.index}>
+function SocialMedia() {
+  return socialLinks.map(item => (
+    <StyledItem key={item.index}>
       <a href={item.link}>
         <img src={item.img} alt={item.alt} />
       </a>
-    </li>
+    </StyledItem>
   ));
-};
+}
+
+const StyledItem = styled.li`
+  margin-right: 2rem;
+`;
+
+export default SocialMedia;

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import { flexRow, justifyAround } from "../../../reusable_styles/flexStyles";
 import { container } from "../../../reusable_styles/helpers";
-import { SocialMedia, socialLinks } from "../social_media/social_media";
+import SocialMedia from "../social_media/social_media";
 
 function Footer() {
   return (
@@ -12,7 +12,7 @@ function Footer() {
         <h2>Toll free +1 (555) 555-5555</h2>
         <h3>Big House</h3>
         <Ul flex>
-          <SocialMedia object={socialLinks} />
+          <SocialMedia />
         </Ul>
       </Container>
     </FooterStyled>

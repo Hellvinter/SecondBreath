@@ -3,9 +3,9 @@ import Head from "next/head";
 
 import GlobalStyles from "../reusable_styles/globalStyles";
 
-import Header from "../components/common/header/header";
-import HomeWelcome from "../components/pages_markup_chunks/home/welcome/welcome";
-import Footer from "../components/common/footer/footer";
+import Header from "../components/every_page_components/header/header";
+import WelcomeToFantasy from "../components/pages_markup_chunks/guest_home/welcome/welcome";
+import Footer from "../components/every_page_components/footer/footer";
 
 const Home = () => (
   <div>
@@ -13,23 +13,13 @@ const Home = () => (
       <title>Home</title>
     </Head>
     <GlobalStyles />
-    <div className="wrapper">
-      <Header />
-      <main>
-        <HomeWelcome />
-      </main>
-      <Footer />
-    </div>
+    <Header />
+    <main>
+      <WelcomeToFantasy />
+    </main>
+    <Footer />
 
-    <style jsx>{`
-      .wrapper {
-        background: linear-gradient(
-          180deg,
-          rgba(102, 46, 255, 0.75) 2.11%,
-          #36205d 86.74%
-        );
-      }
-    `}</style>
+    <style jsx>{``}</style>
   </div>
 );
 
