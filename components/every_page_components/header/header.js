@@ -3,14 +3,14 @@ import styled from "styled-components";
 
 import { flexRow, justifyBetween } from "../../../reusable_styles/flexStyles";
 
-import Navigation from "./navigation/navigation";
+import Navigation from "./navigation";
 import SocialMedia from "../social_media/social_media";
 
 function Header() {
   return (
     <HeaderStyled flex>
       <Navigation />
-      <Logo>Fantasy world</Logo>
+      <Logo>Fantasy worlds</Logo>
       <StyledMedia flex>
         <SocialMedia />
       </StyledMedia>
