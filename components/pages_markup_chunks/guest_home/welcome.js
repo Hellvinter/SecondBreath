@@ -23,9 +23,8 @@ function WelcomeToFantasy() {
 
 const Welcome = styled.section`
   height: 100vh;
-  background: #fff
-    url("/static/backgrounds/mountain_view_wallpapercave_com.jpg") center/cover
-    no-repeat;
+  background: #fff url("backgrounds/mountain_view_wallpapercave_com.jpg")
+    center/cover no-repeat;
   color: white;
 `;
 

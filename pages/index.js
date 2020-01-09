@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 
-import GlobalStyles from "../reusable_styles/globalStyles";
+import GlobalStyles from "../styles/globalStyles";
 
 import Header from "../components/every_page_components/header/header";
 import WelcomeToFantasy from "../components/pages_markup_chunks/guest_home/welcome";

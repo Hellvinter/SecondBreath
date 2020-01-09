@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { flexRow, justifyBetween } from "../../../reusable_styles/flexStyles";
+import { flexRow, justifyBetween } from "../../../styles/flexStyles";
 
 import Navigation from "./navigation";
 import SocialMedia from "../social_media/social_media";

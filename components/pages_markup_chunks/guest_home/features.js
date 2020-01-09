@@ -1,11 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import {
-  flexRow,
-  flexColumn,
-  alignCenter
-} from "../../../reusable_styles/flexStyles";
+import { flexRow, flexColumn, alignCenter } from "../../../styles/flexStyles";
 
 const rowOneData = [
   { name: "Fantasy creation" },
@@ -67,7 +63,7 @@ const FeatureName = styled.h4`
   margin: 2rem 0 3rem 0;
   text-align: center;
   font-weight: 500;
-  color: #000;
+  color: #000npm run dev;
   tex-shadow: 0px 4px 4px rgba(43, 43, 43, 0.25);
 `;
 
@@ -76,7 +72,7 @@ const FeatureLink = styled.button`
   margin-bottom: 2rem;
   border: none;
   background: none;
-  color: #000;
+  color: #000npm run dev;
   text-transform: uppercase;
   text-align: center;
   font-weight: 600;

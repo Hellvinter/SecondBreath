@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { container } from "../../../reusable_styles/helpers";
+import { container } from "../../../styles/helpers";
 
 import {
   aboutProject,

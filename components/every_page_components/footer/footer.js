@@ -1,16 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-import { flexRow, justifyAround } from "../../../reusable_styles/flexStyles";
-import { container } from "../../../reusable_styles/helpers";
+import { flexRow, justifyAround } from "../../../styles/flexStyles";
+import { container } from "../../../styles/helpers";
 import SocialMedia from "../social_media/social_media";
 
 function Footer() {
   return (
     <FooterStyled>
       <Container container>
-        <h2>Toll free +1 (555) 555-5555</h2>
-        <h3>Big House</h3>
+        <h3>Fantasy worlds</h3>
         <Ul flex>
           <SocialMedia />
         </Ul>

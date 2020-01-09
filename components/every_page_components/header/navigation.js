@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
-import { flexRow, justifyStart } from "../../../reusable_styles/flexStyles";
+import { flexRow, justifyStart } from "../../../styles/flexStyles";
 
 const routs = [
   { href: "/", label: "Home" },
