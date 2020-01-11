@@ -9,7 +9,7 @@ function Footer() {
   return (
     <FooterStyled>
       <Container container>
-        <h3>Fantasy worlds</h3>
+        <Heading>Fantasy worlds</Heading>
         <Ul flex>
           <SocialMedia />
         </Ul>
@@ -28,6 +28,10 @@ const FooterStyled = styled.footer`
 
 const Container = styled.div`
   ${props => props.container && container}
+`;
+
+const Heading = styled.h3`
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
 
 const Ul = styled.ul`

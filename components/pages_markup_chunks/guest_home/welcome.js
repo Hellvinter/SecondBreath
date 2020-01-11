@@ -11,7 +11,6 @@ function WelcomeToFantasy() {
       <CreateAccountButtonPlaceholder>
         Create your free account
       </CreateAccountButtonPlaceholder>
-      <ExploreButtonPlaceHolder>Explore</ExploreButtonPlaceHolder>
     </Welcome>
   );
 }
@@ -23,8 +22,9 @@ function WelcomeToFantasy() {
 
 const Welcome = styled.section`
   height: 100vh;
-  background: #fff url("backgrounds/mountain_view_wallpapercave_com.jpg")
-    center/cover no-repeat;
+  background: #fff
+    url("backgrounds/welcome/mountain_view_wallpapercave_com.jpg") center/cover
+    no-repeat;
   color: white;
 `;
 
@@ -48,21 +48,6 @@ const CreateAccountButtonPlaceholder = styled.button`
   color: #fff;
   text-transform: uppercase;
   font-weight: 600;
-`;
-
-const ExploreButtonPlaceHolder = styled.button`
-  display: inline-block;
-  background: none;
-  border: none;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 0;
-  padding: 1rem 2rem;
-  color: #fff;
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: 500;
 `;
 
 export default WelcomeToFantasy;

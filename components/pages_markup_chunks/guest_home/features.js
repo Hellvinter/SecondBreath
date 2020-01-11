@@ -3,18 +3,48 @@ import styled from "styled-components";
 
 import { flexRow, flexColumn, alignCenter } from "../../../styles/flexStyles";
 
-const rowOneData = [
-  { name: "Fantasy creation" },
-  { name: "Soul creation" },
-  { name: "Worlds creation" }
+const domainsData = [
+  {
+    name: "Fantasy creation",
+    background:
+      "/backgrounds/our_domains/fantasy-creation_wallpaperscraft_portal_art_1920x1080.jpg"
+  },
+  {
+    name: "Soul creation",
+    background:
+      "/backgrounds/our_domains/soul-creation_wallpaperscraft_dark_light_castle_1920x1080.jpg"
+  },
+  {
+    name: "World creation",
+    background:
+      "/backgrounds/our_domains/world-creation_wallpaperscraft_house_fairy_tale_1920x1080.jpg"
+  },
+  {
+    name: "Library",
+    background:
+      "/backgrounds/our_domains/library_wallpaperscraft_library_columns_castle_1920x1080.jpg"
+  },
+  {
+    name: "Reading Suggestion",
+    background:
+      "/backgrounds/our_domains/reading-suggestion_wallpaperscraft_book_sphere_1920x1080.jpg"
+  }
 ];
 
-const rowTwoData = [{ name: "Library" }, { name: "Reading Suggestion" }];
+// SOMEHOW I SHOULD DISPLAY BACKGROUNDS
 
 const FeatureList = props => {
-  return props.object.map(feature => (
-    <Feature flex>
-      <FeatureName>{feature.name}</FeatureName>
+  return props.object.map(item => (
+    <Feature
+      flex
+      style={{
+        background: `url(${item.background})`,
+        "background-size": "cover",
+        "background-position": "center",
+        "background-repeat": "no-repeat"
+      }}
+    >
+      <FeatureName>{item.name}</FeatureName>
       <FeatureLink>Check it</FeatureLink>
     </Feature>
   ));
@@ -24,12 +54,9 @@ function OurFeatures() {
   return (
     <FeaturesSection flex>
       <FeaturesHeading>Our Domains</FeaturesHeading>
-      <Row flex rowOne>
-        <FeatureList object={rowOneData} />
-      </Row>
-      <Row flex>
-        <FeatureList object={rowTwoData} />
-      </Row>
+      <Wrapper flex>
+        <FeatureList object={domainsData} />
+      </Wrapper>
     </FeaturesSection>
   );
 }
@@ -48,23 +75,27 @@ const FeaturesHeading = styled.h2`
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
 
-const Row = styled.div`
+const Wrapper = styled.div`
   ${props => props.flex && flexRow};
+  flex-wrap: wrap;
 `;
 
 const Feature = styled.div`
+  margin: 0;
+  padding: 0;
   height: 25rem;
-  width: 100%;
-  border: 1px solid black;
-  ${props => props.flex && [flexColumn, alignCenter]}
+  min-width: 33%;
+  max-width: 50%;
+  ${props => props.flex && [flexColumn, alignCenter]};
+  flex-grow: 1;
 `;
 
 const FeatureName = styled.h4`
   margin: 2rem 0 3rem 0;
   text-align: center;
-  font-weight: 500;
-  color: #000npm run dev;
-  tex-shadow: 0px 4px 4px rgba(43, 43, 43, 0.25);
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0px 4px 4px rgba(43, 43, 43, 0.25);
 `;
 
 // PlaceHolder
@@ -72,10 +103,10 @@ const FeatureLink = styled.button`
   margin-bottom: 2rem;
   border: none;
   background: none;
-  color: #000npm run dev;
+  color: #fff;
   text-transform: uppercase;
   text-align: center;
-  font-weight: 600;
+  font-weight: 400;
 `;
 
 export default OurFeatures;

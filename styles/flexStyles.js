@@ -3,12 +3,12 @@ import { css } from "styled-components";
 // Basic flex styles
 
 export const flexRow = css`
-  display: ${props => (props.flex ? "flex" : "inline-block")};
+  display: ${props => props.flex && "flex"};
 `;
 
 export const flexColumn = css`
-  display: ${props => (props.flex ? "flex" : "inline-block")};
-  flex-direction: ${props => (props.flex ? "column" : "")};
+  display: ${props => props.flex && "flex"};
+  flex-direction: ${props => props.flex && "column"};
 `;
 
 export const noWraping = css`
