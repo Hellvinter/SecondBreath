@@ -7,27 +7,32 @@ const domainsData = [
   {
     name: "Fantasy creation",
     background:
-      "/backgrounds/our_domains/fantasy-creation_wallpaperscraft_portal_art_1920x1080.jpg"
+      "/backgrounds/our_domains/fantasy-creation_wallpaperscraft_portal_art_1920x1080.jpg",
+    status: "work in progress"
   },
   {
     name: "Soul creation",
     background:
-      "/backgrounds/our_domains/soul-creation_wallpaperscraft_dark_light_castle_1920x1080.jpg"
+      "/backgrounds/our_domains/soul-creation_wallpaperscraft_dark_light_castle_1920x1080.jpg",
+    status: "work in progress"
   },
   {
     name: "World creation",
     background:
-      "/backgrounds/our_domains/world-creation_wallpaperscraft_house_fairy_tale_1920x1080.jpg"
+      "/backgrounds/our_domains/world-creation_wallpaperscraft_house_fairy_tale_1920x1080.jpg",
+    status: "work in progress"
   },
   {
     name: "Library",
     background:
-      "/backgrounds/our_domains/library_wallpaperscraft_library_columns_castle_1920x1080.jpg"
+      "/backgrounds/our_domains/library_wallpaperscraft_library_columns_castle_1920x1080.jpg",
+    status: "work in progress"
   },
   {
     name: "Reading Suggestion",
     background:
-      "/backgrounds/our_domains/reading-suggestion_wallpaperscraft_book_sphere_1920x1080.jpg"
+      "/backgrounds/our_domains/reading-suggestion_wallpaperscraft_book_sphere_1920x1080.jpg",
+    status: "work in progress"
   }
 ];
 
@@ -45,7 +50,7 @@ const FeatureList = props => {
       }}
     >
       <FeatureName>{item.name}</FeatureName>
-      <FeatureLink>Check it</FeatureLink>
+      <FeatureLink>{item.status}</FeatureLink>
     </Feature>
   ));
 };
@@ -72,7 +77,7 @@ const FeaturesHeading = styled.h2`
   margin-bottom: 2rem;
   text-align: center;
   text-transform: upperscase;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 0px 4px 4px rgba(43, 43, 43, 0.25);
 `;
 
 const Wrapper = styled.div`
@@ -107,6 +112,7 @@ const FeatureLink = styled.button`
   text-transform: uppercase;
   text-align: center;
   font-weight: 400;
+  text-shadow: 0px 4px 4px rgba(43, 43, 43, 0.25);
 `;
 
 export default OurFeatures;

@@ -1,7 +1,12 @@
 import React from "react";
+import Link from "next/link";
 import styled from "styled-components";
 
-import { flexRow, justifyBetween } from "../../../styles/flexStyles";
+import {
+  flexRow,
+  justifyBetween,
+  justifyEvenly
+} from "../../../styles/flexStyles";
 
 import Navigation from "./navigation";
 import SocialMedia from "../social_media/social_media";
@@ -14,7 +19,14 @@ function Header() {
       <StyledMedia flex>
         <SocialMedia />
       </StyledMedia>
-      <TemporaryComponent>Sign in</TemporaryComponent>
+      <AuthWrapper>
+        <Link href="/auth/sign_in">
+          <Auth>Sign in</Auth>
+        </Link>
+        <Link href="/auth/registration">
+          <Auth>Create account</Auth>
+        </Link>
+      </AuthWrapper>
     </HeaderStyled>
   );
 }
@@ -34,9 +46,15 @@ const Logo = styled.h2`
   z-index: 2;
 `;
 
-const TemporaryComponent = styled.h4`
-  padding-top: 1rem;
+const AuthWrapper = styled.div`
+  ${props => props.flex && [flexRow, justifyEvenly]};
+`;
+
+const Auth = styled.a`
+  padding: 0.5rem;
   margin-right: 2rem;
+  font-weight: 600;
+  cursor: pointer;
 `;
 
 const StyledMedia = styled.ul`

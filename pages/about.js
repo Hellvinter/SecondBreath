@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 
 import GlobalStyles from "../styles/globalStyles";
-import Header from "../components/every_page_components/header/header";
+import Header from "../components/every_page_components/header/index";
 import AboutProject from "../components/pages_markup_chunks/about_project/about_project";
 import Footer from "../components/every_page_components/footer/footer";
 

@@ -4,7 +4,7 @@ import styled from "styled-components";
 const socialLinks = [
   {
     img: "https://img.icons8.com/color/36/000000/github--v1.png",
-    link: "https://github.com/Hellvinter",
+    link: "https://github.com/Hellvinter/fantasy-worlds",
     alt: "GitHub account"
   },
   {
