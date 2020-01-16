@@ -7,8 +7,6 @@ import {
   genericTodos,
   generalStylesTodos,
   homeTodos,
-  realEstateTodos,
-  stockMarketTodos,
   aboutTodos
 } from "./about_info";
 
@@ -17,35 +15,51 @@ import Todo from "../../common/todo/todo";
 function AboutProject() {
   // Bind imported info to constans.
   const about = aboutProject.about;
-  const purpose = aboutProject.purpose;
+
   const genericTodo = genericTodos;
   const genealStyles = generalStylesTodos;
   const home = homeTodos;
-  const realEstate = realEstateTodos;
-  const stockMarket = stockMarketTodos;
   const aboutTodo = aboutTodos;
 
   return (
     <Section container>
-      <h2>About project</h2>
-      <p>{about}</p>
-      <h3>Purpose</h3>
-      <p>{purpose}</p>
-      <h3>Project's Todo list</h3>
-      <Todo data={genericTodo} heading="Generic todos" />
-      <Todo data={genealStyles} heading="Generic styles todos" />
-      <Todo data={home} heading="Home todos" />
-      <Todo data={realEstate} heading="Real estate todos" />
-      <Todo data={stockMarket} heading="Stock market todos" />
-      <Todo data={aboutTodo} heading="About todos styles todos" />
+      <MainHeading>About project</MainHeading>
+      <Paragraph>{about}</Paragraph>
+      <Heading>Project's Todo list</Heading>
+      <TodosWrapper>
+        <Todo data={genericTodo} heading="Generic todos" />
+        <Todo data={genealStyles} heading="Generic styles todos" />
+        <Todo data={home} heading="Home todos" />
+        <Todo data={aboutTodo} heading="About todos styles todos" />
+      </TodosWrapper>
     </Section>
   );
 }
 
 // Styled components.
 const Section = styled.section`
+  height: 100vh;
   text-align: center;
   ${props => props.container && container}
+`;
+
+const MainHeading = styled.h2`
+  margin-top: 2rem;
+`;
+
+const Paragraph = styled.p`
+  font-weight: 400;
+`;
+
+const Heading = styled.h3`
+  margin-top: 2rem;
+`;
+
+const TodosWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
 `;
 
 export default AboutProject;
