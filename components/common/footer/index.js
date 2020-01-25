@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import { flexRow, justifyAround } from "../../../styles/flexStyles";
 import { container } from "../../../styles/helpers";
-import SocialMedia from "../social_media/social_media";
+import SocialMedia from "../social_media/index";
 
 function Footer() {
   return (

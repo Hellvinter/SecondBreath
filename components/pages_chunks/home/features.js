@@ -44,9 +44,9 @@ const FeatureList = props => {
       flex
       style={{
         background: `url(${item.background})`,
-        "background-size": "cover",
-        "background-position": "center",
-        "background-repeat": "no-repeat"
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat"
       }}
     >
       <FeatureName>{item.name}</FeatureName>

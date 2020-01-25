@@ -9,7 +9,7 @@ import {
 } from "../../../styles/flexStyles";
 
 import Navigation from "./navigation";
-import SocialMedia from "../social_media/social_media";
+import SocialMedia from "../social_media/index";
 
 function Header() {
   return (
@@ -20,7 +20,7 @@ function Header() {
         <SocialMedia />
       </StyledMedia>
       <AuthWrapper>
-        <Link href="/auth/sign_in">
+        <Link href="/auth/login">
           <Auth>Sign in</Auth>
         </Link>
         <Link href="/auth/registration">
