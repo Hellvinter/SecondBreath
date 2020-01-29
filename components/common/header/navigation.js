@@ -5,7 +5,8 @@ import { flexRow, justifyStart } from "../../../styles/flexStyles";
 
 const routs = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" }
+  { href: "/about", label: "About" },
+  { href: "/dashboard", label: "Dashboard" }
 ];
 const ListItem = props => {
   return props.data.map(item => (
