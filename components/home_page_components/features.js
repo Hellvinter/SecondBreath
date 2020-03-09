@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { flexRow, flexColumn, alignCenter } from "../../../styles/flexStyles";
+import { flexRow, flexColumn, alignCenter } from "../../styles/flexStyles";
 
 const domainsData = [
   {
@@ -58,7 +58,7 @@ const FeatureList = props => {
 function OurFeatures() {
   return (
     <FeaturesSection flex>
-      <FeaturesHeading>Our Domains</FeaturesHeading>
+      <FeaturesHeading>our domains</FeaturesHeading>
       <Wrapper flex>
         <FeatureList object={domainsData} />
       </Wrapper>
@@ -70,14 +70,14 @@ function OurFeatures() {
 
 const FeaturesSection = styled.section`
   padding: 2rem 0;
-  ${props => props.flex && flexColumn}
+  ${props => props.flex && flexColumn};
+  color: #fff;
 `;
 
 const FeaturesHeading = styled.h2`
   margin-bottom: 2rem;
   text-align: center;
-  text-transform: upperscase;
-  text-shadow: 0px 4px 4px rgba(43, 43, 43, 0.25);
+  text-transform: capitalize;
 `;
 
 const Wrapper = styled.div`

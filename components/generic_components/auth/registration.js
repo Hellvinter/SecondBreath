@@ -56,7 +56,7 @@ class RegistrationForm extends Component {
     return (
       <Main>
         <FormWrapper>
-          <Heading>Sign in</Heading>
+          <Heading>Create an account</Heading>
           <Form onSubmit={this.onSumbit}>
             <Label>
               User name
@@ -99,6 +99,7 @@ const Main = styled.main`
   justify-content: center;
   align-items: center;
   height: 100vh;
+  color: #fff;
 `;
 
 const FormWrapper = styled.div`
@@ -109,7 +110,8 @@ const FormWrapper = styled.div`
   padding: 0;
   min-height: 25rem;
   min-width: 35rem;
-  box-shadow: 0px 4px 4px rgba(43, 43, 43, 0.25);
+  background-color: #1d2d3d;
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 1);
 `;
 
 const Heading = styled.h3`
@@ -137,11 +139,12 @@ const Input = styled.input`
 
 const Submit = styled.button`
   background: none;
-  border: 1px solid black;
-  width: 5rem;
-  cursor: pointer;
   margin: 1.5rem auto;
+  width: 5rem;
+  border: 1px solid #fff;
+  color: #fff;
   text-transform: capitalize;
+  cursor: pointer;
 `;
 
 export default RegistrationForm;

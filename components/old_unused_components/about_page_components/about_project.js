@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { container } from "../../../styles/helpers";
+import { container } from "../../styles/helpers";
 
 import {
   aboutProject,
@@ -10,7 +10,7 @@ import {
   aboutTodos
 } from "./about_info";
 
-import Todo from "../../common/todo/todo";
+import Todo from "../generic_components/todo/todo";
 
 function AboutProject() {
   // Bind imported info to constans.

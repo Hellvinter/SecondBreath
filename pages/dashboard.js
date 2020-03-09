@@ -3,12 +3,12 @@ import Head from "next/head";
 
 import GlobalStyles from "../styles/globalStyles";
 
-import Header from "../components/common/header/index";
-import UserDashboard from "../components/pages_chunks/dashboard/index";
-import Footer from "../components/common/footer/index";
+import Header from "../components/generic_components/header/index";
+import UserDashboard from "../components/dashboard_page_components/index";
+import Footer from "../components/generic_components/footer/index";
 
 const DashBoard = () => (
-  <div>
+  <div className="theme">
     <Head>
       <title>Home</title>
     </Head>
@@ -16,6 +16,12 @@ const DashBoard = () => (
     <Header />
     <UserDashboard />
     <Footer />
+
+    <style jsx>{`
+      .theme {
+        background-color: #15202a;
+      }
+    `}</style>
   </div>
 );
 

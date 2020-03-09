@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 function UserDashboard() {
   return (
-    <Main className="main">
+    <Main>
       <Heading>You are logged to dashboard page</Heading>
       <p>only authinticated users can see that page</p>
     </Main>
@@ -11,7 +11,7 @@ function UserDashboard() {
 }
 
 const Main = styled.main`
-  height: 74vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

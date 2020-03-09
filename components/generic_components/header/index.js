@@ -34,8 +34,7 @@ function Header() {
 // Styled components.
 const HeaderStyled = styled.header`
   ${props => props.flex && [flexRow, justifyBetween]};
-  backgorund: rgba(255, 255, 255, 0.85);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #fff;
 `;
 
 const Logo = styled.h2`

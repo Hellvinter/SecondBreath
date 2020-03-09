@@ -5,14 +5,13 @@ import { flexRow, justifyStart } from "../../../styles/flexStyles";
 
 const routs = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
   { href: "/dashboard", label: "Dashboard" }
 ];
 const ListItem = props => {
   return props.data.map(item => (
     <NavLi>
       <Link href={item.href}>
-        <a>{item.label}</a>
+        <LiLink>{item.label}</LiLink>
       </Link>
     </NavLi>
   ));
@@ -30,12 +29,11 @@ function Navigation() {
 
 // Styled components.
 
-// later remove width from Nav
 const Nav = styled.nav`
   width: 55%;
-  padding: 0 2rem;
+  padding: 0.5rem 2rem;
 `;
-
+//background-color: inherit;
 const NavUl = styled.ul`
   ${props => props.flex && [flexRow, justifyStart]}
   list-style: none;
@@ -43,7 +41,11 @@ const NavUl = styled.ul`
 
 const NavLi = styled.li`
   padding-right: 3rem;
-  color: #000;
+  cursor: pointer;
+`;
+
+const LiLink = styled.a`
+  color: #fff;
 `;
 
 export default Navigation;

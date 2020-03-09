@@ -3,13 +3,13 @@ import Head from "next/head";
 
 import GlobalStyles from "../styles/globalStyles";
 
-import Header from "../components/common/header/index";
-import WelcomeToFantasy from "../components/pages_chunks/home/welcome";
-import OurFeatures from "../components/pages_chunks/home/features";
-import Footer from "../components/common/footer/index";
+import Header from "../components/generic_components/header/index";
+import WelcomeToFantasy from "../components/home_page_components/welcome";
+import OurFeatures from "../components/home_page_components/features";
+import Footer from "../components/generic_components/footer/index";
 
 const Home = () => (
-  <div>
+  <div className="theme">
     <Head>
       <title>Home</title>
     </Head>
@@ -21,8 +21,15 @@ const Home = () => (
     </main>
     <Footer />
 
-    <style jsx>{``}</style>
+    <style jsx>{`
+      .theme {
+        background-color: #15202a;
+      }
+    `}</style>
   </div>
 );
+// Color theme.
 
+// 2b2b2b
+// 15202a
 export default Home;
